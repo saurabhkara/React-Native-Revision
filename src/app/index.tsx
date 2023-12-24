@@ -6,14 +6,14 @@ import {
   Text,
   View,
 } from "react-native";
-import DayListItem from "./src/components/core/DayListItem";
+import DayListItem from "../components/core/DayListItem";
 import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 const days = [...Array(24)].map((item, index) => index + 1);
 
 SplashScreen.preventAutoHideAsync();
-export default function App() {
+export default function HomeScreen() {
   let [fontsLoaded, fontError] = useFonts({
     Inter: Inter_900Black,
   });
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 
   content: {
     gap: 10,
-    backgroundColor: "blue",
+    // backgroundColor: "blue",
   },
   column: {
     gap: 10,
